@@ -17,3 +17,26 @@ The project includes exploratory data analysis, model training, and an interacti
 - Streamlit (planned)
 
 ## 📂 Project Structure
+student-performance-prediction/
+│
+├── data/
+│ └── student-mat.csv
+├── notebooks/
+│ └── eda.ipynb
+├── model/
+├── app.py
+├── train_model.py
+└── README.md
+
+## 🚀 Current Status
+✔ Dataset loaded  
+✔ Initial EDA completed  
+
+## 🔮 Upcoming Work
+- Data preprocessing
+- Model training
+- Interactive Streamlit application
+- Deployment
+
+## 📊 Dataset
+Student Performance Dataset (UCI / Kaggle)
