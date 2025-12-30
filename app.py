@@ -4,21 +4,21 @@ import joblib
 import matplotlib.pyplot as plt
 from sklearn.inspection import permutation_importance
 
-# ------------------ Page Config ------------------
+# Page configuration
 st.set_page_config(
     page_title="Student Performance Predictor",
     page_icon="🎓",
     layout="centered"
 )
 
-# ------------------ Title ------------------
+
 st.title("🎓 Student Performance Prediction")
 st.write("Predict student academic performance using machine learning.")
 
-# ------------------ Load Model ------------------
+# Load model
 model = joblib.load("model/student_performance_model.pkl")
 
-# ------------------ Load Reference Data (for Feature Importance) ------------------
+
 @st.cache_data
 def load_reference_data():
     df = pd.read_csv("data/student-mat.csv", sep=";")
@@ -40,7 +40,7 @@ def load_reference_data():
 
 X_ref, y_ref = load_reference_data()
 
-# ------------------ User Inputs ------------------
+
 st.subheader("Enter Student Details")
 
 gender = st.selectbox("Gender", ["M", "F"])
@@ -55,7 +55,7 @@ parent_edu = st.selectbox(
 g1 = st.slider("Previous Period Score (G1)", 0, 20, 12)
 g2 = st.slider("Second Period Score (G2)", 0, 20, 13)
 
-# ------------------ Build Input Data ------------------
+# Take input data
 input_data = {
     'school': 'GP',
     'sex': gender,
@@ -93,7 +93,7 @@ input_data = {
 
 input_df = pd.DataFrame([input_data])
 
-# ------------------ Prediction ------------------
+# Prediction
 if st.button("Predict Performance"):
     prediction = model.predict(input_df)[0]
 
@@ -117,7 +117,7 @@ if st.button("Predict Performance"):
         st.success("🟢 High Performance")
         st.write("Great job! Keep up the good work 👏")
 
-# ------------------ Feature Importance ------------------
+
 def compute_feature_importance(model, X, y):
     result = permutation_importance(
         model,
