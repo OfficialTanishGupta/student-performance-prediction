@@ -38,7 +38,8 @@ Explainable AI using permutation feature importance
 Live deployment on Streamlit Community Cloud
 
 🧠 Machine Learning Workflow
-📊 Dataset
+   
+   📊 Dataset
 
 Student Performance Dataset (UCI Machine Learning Repository / Kaggle)
 
@@ -52,7 +53,8 @@ Final Score	Performance Label
 0 – 10	Low
 11 – 15	Medium
 16 – 20	High
-⚙️ Data Preprocessing
+
+  ⚙️ Data Preprocessing
 
 Numerical features scaled using StandardScaler
 
@@ -62,7 +64,7 @@ Unified preprocessing using ColumnTransformer
 
 Prevents data leakage and ensures consistency
 
-🤖 Model Training
+  🤖 Model Training
 
 Multiple models were trained and evaluated:
 
@@ -74,7 +76,7 @@ Gradient Boosting Classifier
 
 The Random Forest model showed the best performance and was selected for deployment.
 
-📈 Model Explainability
+  📈 Model Explainability
 
 Implemented Permutation Feature Importance
 
